@@ -1,8 +1,16 @@
 function firstWord(s) {
-  // your code here
-}
+  // Trim any leading or trailing whitespace
+  s = s.trim();
+  
+  // Find the index of the first space
+  const firstSpaceIndex = s.indexOf(' ');
 
-// Do not change the code below
+  if (firstSpaceIndex === -1) {
+    return s;
+  }
+
+  return s.substring(0, firstSpaceIndex);
+}
 
 const s = prompt("Enter String:");
 alert(firstWord(s));
